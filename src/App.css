@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.background {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
+    url('../src/assets/xREMNH6.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  max-width: 100%;
+}

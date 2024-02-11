@@ -5,7 +5,7 @@ const SayHello = async (User) => {
     return data;
 }
 
-const SumTwoNumbers = async (Answer1, Answer2) => {
+const GreaterOrLess = async (Answer1, Answer2) => {
     const promise = await fetch(`https://gutierrezfallforone.azurewebsites.net/MiniChallengeTwo/GreaterOrLess/${Answer1}/${Answer2}`)
     const data = await promise.text();
     console.log(data)
@@ -17,7 +17,7 @@ const askingQuestions = async (Name , WakeUpTime) => {
     const data = await promise.text();
     return data;
 }
-const GreaterOrLess = async (numberOne, numberTwo) => {
+const SumTwoNumbers= async (numberOne, numberTwo) => {
     const promise = await fetch(`https://gutierrezfallforone.azurewebsites.net/MiniChallengeFour/GreaterOrLess/${numberOne}/${numberTwo}`);
     const data = await promise.text();
     return data
