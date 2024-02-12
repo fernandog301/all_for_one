@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { MabLib } from '../Services/DataServices'
+import { madLibs } from '../Services/DataServices'
 
 export default function MadLibComponent() {
   const [gender, getGender] = useState("");
@@ -22,7 +22,7 @@ export default function MadLibComponent() {
     } else if (gender.toLowerCase() === "something" || name.toLowerCase() === "something" || age.toLowerCase() === "something" || color.toLowerCase() === "something" || pronoun.toLowerCase() === "something" || food.toLowerCase() === "something" || job.toLowerCase() === "something" || adjective1.toLowerCase() === "something" || adjective2.toLowerCase() === "something" || noun.toLowerCase() === "something") {
       getOutput("Don't actually put something... idiot")
     } else {
-      const response = await MabLib(gender, name, age, color, pronoun, food, job, adjective1, adjective2, noun);
+      const response = await madLibs(gender, name, age, color, pronoun, food, job, adjective1, adjective2, noun);
       getOutput(response);
     }
 

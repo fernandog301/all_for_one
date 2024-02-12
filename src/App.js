@@ -8,7 +8,7 @@ import ReverseItComponent from './Component/ReverseItComponent';
 import ReverseItNumbersComponent from './Component/ReverseItNumbersComponent';
 import RestaurantPickerComponent from './Component/RestaurantPickerComponent';
 import OddOrEvenComponent from './Component/OddOrEvenComponent';
-// import MadLibComponentComponent from './Component/MadLibComponent';
+import MadLibComponentComponent from './Component/MadLibComponent';
 import AskingQuestionsComponent from './Component/AskingQuestionsComponent';
 import GreaterOrLessComponent from './Component/GreaterOrLessComponent';
 import Magic8BallComponent from './Component/MagicEightBallComponent';
@@ -27,7 +27,7 @@ function App() {
       <Route path='RestaurantPicker' element={<RestaurantPickerComponent/>}/>
       <Route path='OddOrEven' element={<OddOrEvenComponent/>}/>
       <Route path='Magic8Ball' element={<Magic8BallComponent/>}/>
-      {/* <Route path='MadLib' element={<MadLibComponentComponent/>}/> */}
+      <Route path='MadLib' element={<MadLibComponentComponent/>}/>
       <Route path='GreaterOrLess' element={<GreaterOrLessComponent/>}/>
       <Route path='AskingQuestions' element={<AskingQuestionsComponent/>}/>
     </Routes>
