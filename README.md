@@ -1,6 +1,7 @@
 by: Fernando Gutierrez
 des: 
-
+// Peer reviewed by : Zahid Afsar
+// Peer comment : Although the design is similar to the figma most of the functionality works for the website. The site is responsive for all 3 versions desktop, tablet, and mobile. Some fixes that the site needs are that the adding numbers page and compare page are reversed so on adding page it compares the numbers and on compare page it adds the numbers. There is also two home buttons on some pages. Overall I would like to say if you fix those errors everything should be good.
 
 
 
