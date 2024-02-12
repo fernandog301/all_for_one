@@ -1,42 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
-import { restaurantPicker } from '../Services/DataServices';
+import React from "react";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import { useState } from "react";
+import { restaurantPicker } from "../Services/DataServices";
 
 export default function RestaurantPickerComponent() {
+  const [string, getInput] = useState("");
+  const [result, setResult] = useState("");
 
-    const [string, getInput] = useState('');
-    const [result, setResult] = useState('');
-
-    const getResult = async () => {
-      const promise = await restaurantPicker(string)
-      setResult(promise)
-    }
+  const getResult = async () => {
+    const promise = await restaurantPicker(string);
+    setResult(promise);
+  };
 
   return (
-    <div className='background'>
-      
-      <Button>
-        <Link to={"/"}>
-          <p className="">Back</p>
+    <div className="background">
+      <div>
+      <Link to={"/"}>
+          <p>Home</p>
         </Link>
-        </Button>
 
+        <h1 className="d-flex justify-content-center pt-5 text-white">Restaurant Picker</h1>
+        <p className="d-flex justify-content-center pt-5 text-white">
+        Choose a restaurant to generate a random restaurant
+a =  FastFood;
+b = MexFood;
+c = AsianFood;        </p>
 
-
-
-        <h1 className='d-flex justify-content-center pt-5'>Say Hello</h1>
-            <p className='d-flex justify-content-center pt-5'>Enter your name below</p>
-
-
-            <div className='d-inline-flex flex-col justify-content-center pt-5'>
-                <Form.Label htmlFor="name">Name</Form.Label>
-                <Form.Control onChange={(e) => getInput(e.target.value)} id='name'  type="text" />
-                <Button onClick={() => getResult()} variant="primary">Submit</Button>{' '}
-            </div>
-                <p className='d-flex justify-content-center pt-5'>{result}</p>    
-                </div>
-  )
-}
+        <div className="d-inline-flex flex-col justify-center pt-5">
+          <Form.Label htmlFor="name" className="text-white d-flex justify-content-center">Response</Form.Label>
+          <Form.Control
+            onChange={(e) => getInput(e.target.value)}
+            id="name"
+            type="text"
+          />
+          <Button onClick={() => getResult()} variant="primary">
+            Submit
+          </Button>{" "}
+        </div>
+        <p className="d-flex justify-content-center pt-5">{result}</p>
+      </div>
+    </div>
+  );
+};
